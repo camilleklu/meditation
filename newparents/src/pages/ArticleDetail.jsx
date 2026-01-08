@@ -83,7 +83,6 @@ const ArticleDetail = () => {
         />
         <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/10 to-transparent" />
       </div>
-      *{" "}
       <div className="px-6 mt-6 z-10">
         <span className="font-poppins bg-[#FFD406] text-gray-800 text-xs font-bold px-4 py-1.5 rounded-full shadow-sm">
           {article.category}
