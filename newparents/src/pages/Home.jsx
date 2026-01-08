@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { useWorkshops } from "../context/WorkshopContext";
 import { API_URL } from "../config"; // Import de la config API
+import logoImage from "../assets/logo/Logo_parenthese.png";
 
 import ArticleCardHome from "../components/ArticleCardHome";
 import AudioCardHome from "../components/AudioCardHome";
@@ -65,32 +66,31 @@ const Home = () => {
 
   return (
     <div className="bg-[#F7F5EA] min-h-screen pb-32">
-      <div className="bg-[#F7AB42] rounded-b-[50px] px-6 pt-8 pb-10 shadow-lg">
-        <div className="flex items-center gap-3 mb-8">
-          <div>
-            <p className="font-schoolbell text-white/80 text-2xl font-medium">
-              Bonjour,
-            </p>
-            <h1 className="font-schoolbell text-gray-800 text-4xl font-bold">
-              Comment allez-vous ?
-            </h1>
-          </div>
-        </div>
-
-        <div className="bg-[#FFD406] rounded-[40px] p-8 shadow-inner relative overflow-hidden">
-          <h2 className="font-schoolbell text-gray-800 text-2xl font-black mb-3">
-            Conseil du jour
-          </h2>
-          <p className="font-poppins text-gray-700 font-medium leading-relaxed mb-6">
-            Prenez 5 minutes pour respirer profondément. Vous le méritez.
-          </p>
-          <Link
-            to="/audios"
-            className="font-poppins bg-[#2CADA4] flex items-center justify-center text-white text-center font-bold px-8 py-3 rounded-2xl shadow-md"
-          >
-            Commencer
-          </Link>
-        </div>
+      <div className="flex items-center justify-center bg-[#2CADA4] p-2">
+        <img
+          src={logoImage}
+          alt="Logo Parenthese"
+          className="w-18 h-auto pl-2"
+        />
+        <h1 className="text-[#F7F5EA] font-schoolbell text-3xl p-4">
+          <span className="text-[#FFD406]">P</span>aren
+          <span className="text-[#F7AB42]">t</span>hèse
+        </h1>
+      </div>
+      <div className="w-full h-6 bg-[#F7AB42]" />
+      <div className="bg-white shadow-sm rounded-b-[40px] p-8 shadow-inner relative overflow-hidden">
+        <h2 className="font-schoolbell text-gray-800 text-2xl font-black mb-3">
+          Conseil du jour
+        </h2>
+        <p className="font-poppins text-gray-700 font-medium leading-relaxed mb-6">
+          Prenez 5 minutes pour respirer profondément. Vous le méritez.
+        </p>
+        <Link
+          to="/audios"
+          className="font-poppins bg-[#2CADA4] flex items-center justify-center text-white text-center font-bold px-8 py-3 rounded-2xl shadow-md"
+        >
+          Commencer
+        </Link>
       </div>
 
       {/* --- SECTION PUBLICATIONS --- */}
